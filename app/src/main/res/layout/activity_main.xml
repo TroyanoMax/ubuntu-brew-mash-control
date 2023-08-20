@@ -6,13 +6,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="ACTIVAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnOnBT" android:layout_weight="1"
+            />
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button
+                    android:text="DESACTIVAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnOffBT" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="DISPOSITIVOS BT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnDispBT"/>
+            <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" android:id="@+id/idSpinDisp"
+                    android:contentDescription="dispositivos"/>
+        </LinearLayout>
+        <Button
+                android:text="CONECTAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/idBtnConect"/>
+        <TextView
+                android:text="LUZ 1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView" android:textSize="16sp"
+                android:textAlignment="center" android:textStyle="bold"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="ON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnLuz_1on" android:layout_weight="1"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button
+                    android:text="OFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnLuz_1off" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+                android:text="LUZ 2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/luz2" android:textSize="16sp"
+                android:textAlignment="center" android:textStyle="bold"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="ON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnLuz_2on" android:layout_weight="1"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <Button
+                    android:text="OFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/idBtnLuz_2off" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+                android:text="TEXTO A ENVIAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textViewToSend" android:textSize="16sp"
+                android:textAlignment="textStart" android:textStyle="bold"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/idTextOut" android:hint="Texto a Enviar"/>
+        <Button
+                android:text="ENVIAR TEXTO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/idBtnEnviar"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
